@@ -1,0 +1,20 @@
+Program’s Output:
+
+No, I wug.
+You wugga wug.
+I wug.
+
+Notes: When baffle() is called/ invoked, it refers to the baffle method defined and carries out the statements within. Specifically, it inserts the word “wug” and then invokes ping(), which in turn refers to the ping method, which inserts a period and ends the line: System.out.println(“.”);
+
+
+2) Stack Diagram:
+
+
+main zoop [baffle(), “You wugga ”, baffle()];   baffle [“wug”, ping() ]
+
+zoop baffle [“wug”, ping() ]
+
+baffle  ping [“.”]
+
+
+3) If you invoke baffle at the end of the ping method it will create an endless loop with no exit, and will likely crash the unwitting machine running the program.
