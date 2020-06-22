@@ -10,11 +10,26 @@ Notes: When baffle() is called/ invoked, it refers to the baffle method defined 
 2) Stack Diagram:
 
 
-main zoop [baffle(), “You wugga ”, baffle()];   baffle [“wug”, ping() ]
+main ["No, I  "] zoop 
 
-zoop baffle [“wug”, ping() ]
+zoop baffle 
 
-baffle  ping [“.”]
+baffle  ["wug"] 
 
+zoop [You wugga "]
+
+baffle ["wug']
+
+ping  ["."]
+
+main ["I "]
+
+baffle ["wug"]
+
+ping ["."]
+
+
+
+Notes: Not sure if my stack diagram follows convention here. Initially, even though I understood that from main as soon as the compiler reached zoop it would jump to the zoop method, then reach that first baffle and carry out the baffle method, etc--I felt the need to diagram all statements/attribute within each method (am I using the correct terminology here?). However, I think I was not doing the diagram correctly the first time around. I'm looking forward to feedback on this one!
 
 3) If you invoke baffle at the end of the ping method it will create an endless loop with no exit, and will likely crash the unwitting machine running the program.
