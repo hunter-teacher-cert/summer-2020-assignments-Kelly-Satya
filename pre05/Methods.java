@@ -47,12 +47,12 @@ public static int ack (int q, int r) {
   return ack(q-1, 1);
   }
 
-  else  if ((q > 0) && (r > 0))
+  else //((q > 0) && (r > 0))
   {
     return ack(q-1, ack(q, r-1));
   }
-  else
-  return q + 1;
+  //else
+  //return q + 1;
 }
 
 
