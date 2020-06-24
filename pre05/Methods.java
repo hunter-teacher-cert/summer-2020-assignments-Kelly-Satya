@@ -51,6 +51,8 @@ public static int ack (int q, int r) {
   {
     return ack(q-1, ack(q, r-1));
   }
+  else
+  return q + 1;
 }
 
 
@@ -106,6 +108,6 @@ values within. Example, "Can the side lengths 3, 4, 5 form a triangle?"*/
       int tryAck3;
       tryAck3= ack(1,1);
       System.out.println(tryAck3);
-      //return;
+      //return 0;
   }
 }
