@@ -7,6 +7,7 @@ public class Methods {
 // instance variables here
 
 
+
 public static boolean isDivisible (int n, int m) {
 //Exercise 2 method
     if (n % m == 0) {
@@ -33,23 +34,24 @@ public static boolean isTriangle (int a, int b, int c) {
 }
 
 public static int ack (int q, int r) {
-/*My effort at challenge 8. I'm not sure how to make the method type compatible.
-I've tried numerous variations and I keep getting messages that the types are
-not compatible. */
-  if (q = 0){
+/*
 
-    ack(q, r + 1); }
 
-  if (q > 0 && r = 0) {
+ */
+  if (q == 0){
+    return r + 1;
 
-    ack(q-1,r);
   }
 
-  if (q > 0 && r >0) {
+  else if ((q > 0) && (r == 0)) {
+  return ack(q-1, 1);
+  }
 
-            ack(q-1, ack(q,r-1));
+  else  if ((q > 0) && (r > 0))
+  {
+    return ack(q-1, ack(q, r-1));
   }
-  }
+}
 
 
 
@@ -94,14 +96,16 @@ values within. Example, "Can the side lengths 3, 4, 5 form a triangle?"*/
       System.out.println(tryAck1);
       System.out.println(" ");
 
+
       int tryAck2;
       tryAck2= ack(2,0);
       System.out.println(tryAck2);
       System.out.println(" ");
 
+
       int tryAck3;
       tryAck3= ack(1,1);
       System.out.println(tryAck3);
-      return;
+      //return;
   }
 }
