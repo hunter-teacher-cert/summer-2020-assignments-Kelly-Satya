@@ -33,7 +33,7 @@ public static int factorial (int n) {
 
 public static int myexp (int x, int n) {
 //My attempt at exercise 5
-      float ans=1;
+      int ans=1;
       int temp=x;
       int stop=n;
       int i;
@@ -43,7 +43,7 @@ public static int myexp (int x, int n) {
         temp=(temp*x)/i;
         ans=ans+temp;
       }
-        return myexp;
+        return ans;
 }
 
   public static void main(String[] args) {
@@ -65,6 +65,9 @@ public static int myexp (int x, int n) {
       int stop;
       int temp;
       System.out.println(myexp(1,4));
+      System.out.println(myexp(2,8));
+
+      //
 /*As much as I hate too, I'm giving up on this exercise. I don't understand the
 math yet. I looked at several videos about e^x infinite series expansion and I
 just feel completely overwhelmed by the combination of the math (I do NOT have a
