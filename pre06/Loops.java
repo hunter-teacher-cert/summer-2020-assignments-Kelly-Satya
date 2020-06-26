@@ -62,10 +62,11 @@ public static int myexp (int x, int n) {
 
 //testing exercise 5
 
-      int stop;
-      int temp;
-      System.out.println(myexp(1,4));
-      System.out.println(myexp(2,8));
+      //int stop;
+      //int temp;
+      //System.out.println(myexp(1,4));
+      //System.out.println(myexp(2,8));
+      System.out.println(Math.exp(1));
 
       //
 /*As much as I hate too, I'm giving up on this exercise. I don't understand the
