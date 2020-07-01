@@ -12,11 +12,24 @@ public class GridImage {
 
     rowPop(array2d,2,14);
     colPop(array2d,3,89);
+    print2d(array2d);
+    System.out.println(" ");
 
 
     invert(array2d);
     print2d(array2d);
-    //System.out.println(invert);
+    System.out.println(" ");
+
+    //diagonal(array2d, row, col, direction, value)
+    // direction values range from 1-3
+
+    diagonal(array2d, 10, 8, 3, 777);
+    print2d(array2d);
+    System.out.println(" ");
+
+    diagonal(array2d, 4, 7, 1, 777);
+    print2d(array2d);
+    System.out.println("Slowly learning... ");
 
 
   } //end main
@@ -62,7 +75,6 @@ public class GridImage {
           else {
               array2d[row][col] = 255;
           }//end else
-          //System.out.print(array2d[row][col]);
           }//end for second for loop
       } //end for first loop
 
@@ -78,6 +90,35 @@ public class GridImage {
       3: down + right
      */
 
+     /*I used DW's code here and walked through step by step to create a trace
+     diagram. Too, finally getting some more fluency on calling methods in a logical
+     order from main */
+
+
+        int moveR = -1;
+        int moveC = -1;
+
+        if (direction == 1) {
+          moveC = 1;
+        }
+        else if (direction == 2){
+          moveR = 1;
+        }
+        else if (direction ==3) {
+          moveR = 1;
+          moveC = 1;
+        }
+
+
+        while (row >= 0 && row < array2d.length && col >= 0 &&
+              col < array2d[row].length) {
+
+                array2d[row][col]=value;
+                row = row + moveR;
+                col = col + moveC;
+
+
+        }
 
   }//end diagonal
 
