@@ -23,7 +23,6 @@ public class GridImage {
 
     for (int row=0; row < array2d.length; row++) {
       for (int col=0; col < array2d[row].length; col++) {
-
         System.out.printf("%03d ", array2d[row][col]);
       }//end c for
 
@@ -58,7 +57,7 @@ public class GridImage {
   }//end invert
 
 
-  public static void diagonal(int[][] array2d, int r, int c, int direction, int value) {
+  public static void diagonal(int[][] array2d, int row, int col, int direction, int value) {
 
     /* Sets the diagonal starting at d2[r][c] going in direction to value
       0: up + left
