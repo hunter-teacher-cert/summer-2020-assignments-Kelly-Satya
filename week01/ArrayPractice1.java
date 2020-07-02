@@ -7,15 +7,15 @@ public class ArrayPractice1 {
 // model code for student-facing ppt.
   public static void main(String[] args) {
 
-      int[] studentOneGrades= new int[5];
+      int[][] theGoatGrid= new int[5][10];
 
-      for (int index=0; index < studentOneGrades.length; index++) {
+      for (int index=0; index < theGoatGrid.length; index++) {
+            for (int column=0; column < theGoatGrid[index].length; column++){
 
-          studentOneGrades[index]= 95;
-      }// end for loop
-
-      System.out.println(Arrays.toString(studentOneGrades));
-
+          theGoatGrid[index][column]= 95;
+      }// end nested for loop
+} // end parent for loop
+  System.out.println(Arrays.deepToString(theGoatGrid));
   } // end main
 
 } //end public class ArrayPractice1
