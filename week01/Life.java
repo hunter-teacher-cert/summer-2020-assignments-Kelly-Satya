@@ -14,8 +14,6 @@ NOTA BENE:  All births and deaths occur simultaneously.
 Together, they constitute a single generation
  */
 
-
-
 class Life{
 
     /*
@@ -68,11 +66,15 @@ class Life{
           for (int i = r - 1; i <= r + 1; i++) {
               for (int j = c - 1; j <= c + 1; j++) {
                   if (i != r || j != c) {
+                    if(board[i][j]=='X'){
                 count++;
-                } //end count if condition
+              } //end if statement looking for X
+              } //end count neighbors if condition
               } // end nested for loop
           } // end parent for loop
+               System.out.println(count);
                return count;
+
     } // end countNeighbors
 
     /*
@@ -115,6 +117,9 @@ class Life{
          setCell(board,3,6,'X');
          setCell(board,3,7,'X');
 	       printBoard(board);
+         countNeighbors(board,3,5);
+         printBoard(board);
+
     } // end main
 } // end class
 
