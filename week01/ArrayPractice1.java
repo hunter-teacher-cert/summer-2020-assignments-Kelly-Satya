@@ -9,8 +9,8 @@ public class ArrayPractice1 {
 
       int[][] theGoatGrid= new int[5][10];
 
-      for (int index=0; index < theGoatGrid.length; index++) {
-            for (int column=0; column < theGoatGrid[index].length; column++){
+      for (int row=0; row < theGoatGrid.length; row++) {
+            for (int column=0; column < theGoatGrid[row].length; column++){
 
           theGoatGrid[index][column]= 95;
       }// end nested for loop
