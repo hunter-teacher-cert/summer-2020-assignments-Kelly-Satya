@@ -65,9 +65,11 @@ class Life{
     public static int countNeighbors(char[][] board, int r, int c){
 
           int count=0;
-          for (int row = 0; row < board.length; row++) {
-              for (int col = 0; col < board[row].length; col++) {
-
+          for (int i = r - 1; i <= r + 1; i++) {
+              for (int j = c - 1; j <= c + 1; j++) {
+                  if (i != r || j != c) {
+                count++;
+                } //end count if condition
               } // end nested for loop
           } // end parent for loop
                return count;
@@ -118,4 +120,4 @@ class Life{
 
 /* Learned: I CANNOT use the same variable names for rows and columns
 within the nested for loops in different methods. I thought these were only
-visible within the method...so that's definitely a clarification. 
+visible within the method...so that's definitely a clarification. */
