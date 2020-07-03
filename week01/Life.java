@@ -67,9 +67,9 @@ class Life{
               for (int j = c - 1; j <= c + 1; j++) {
                   if (i != r || j != c) {
                     if(board[i][j]=='X'){
-                count++;
-              } //end if statement looking for X
-              } //end count neighbors if condition
+                      count++;
+                    } //end if statement looking for X
+                  } //end count neighbors if condition
               } // end nested for loop
           } // end parent for loop
                System.out.println(count);
@@ -104,10 +104,24 @@ class Life{
     */
 
     public char[][] generateNextBoard(char[][] board){
-	       char newBoard[][] = new char[25][25];
-	        // fill the new board
+
+         char newBoard[][] = new char[25][25];
+
+            for (int newR = 0; newR < 25; newR++) {
+              for (int newC = 0; newC < 25; newC++) {
+                    if (board[newR][newC]=='X' &&
+                    countNeighbors(board,newR,newC) > 3 ||
+                    countNeighbors(board,newR,newC) < 2) {
+                      newBoard[newR][newC] = ' '; //sets cells to dead
+
+             } // end nested for
+         } // end parent for statement
+       }// end char method
 	         return newBoard;
     } //end generateNextBoard method
+
+
+
 
 
     public static void main(String[] args) {
@@ -117,7 +131,7 @@ class Life{
          setCell(board,3,6,'X');
          setCell(board,3,7,'X');
 	       printBoard(board);
-         countNeighbors(board,3,5);
+         countNeighbors(board,3,6);
          printBoard(board);
 
     } // end main
