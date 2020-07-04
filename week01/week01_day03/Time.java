@@ -6,6 +6,7 @@ import java.util.*;
 public class Time{
 
   // your time class code goes in here
+    Time time;
     private int hour;
     private int minute;
     private double second;
@@ -35,16 +36,37 @@ constructor, like this one. */
 
 } //end Time value constructor
 
-public static void printTime(Time t) {
+// public static void printTime(Time t) {
+//
+//     // System.out.print(t.hour);
+//     // System.out.print(t.minute);
+//     // System.out.print(":");
+//     // System.out.println(t.second);
+//
+//     // OR more concisely:
+//     System.out.printf("%02d: %02d: %04.lf\n",
+//     this.hour, this.minute, this.second);
+// } // end PrintTime method
 
-    // System.out.print(t.hour);
-    // System.out.print(t.minute);
-    // System.out.print(":");
-    // System.out.println(t.second);
 
-    // OR more concisely:
+// the following is an instance method and therefore does not have "static"
+public String toString(){
 
-    System.out.printf("%02d: %02d: %04.lf\n", t.hour, t.minute, t.second);
-} // end PrintTime method
+  return String.format("%02d: %02d: %04.lf\n",
+  time.hour, time.minute, time.second);
+} // end of toString method
 
+
+
+public static void main(String[] args) {
+
+/* The new object is created in main, as follows. When you invoke new, java
+creates the object and calls your constructor to initialize the instance
+variables */
+
+Time time = new Time(11,59,59.9);
+//String s = time.toString();
+System.out.println(time);
+
+} // end main
 } //end class
