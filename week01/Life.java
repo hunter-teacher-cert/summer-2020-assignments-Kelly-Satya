@@ -137,10 +137,21 @@ class Life{
          setCell(board,3,5,'X');
          setCell(board,3,6,'X');
          setCell(board,3,7,'X');
+         setCell(board,10,9,'X');
+         setCell(board,11,9,'X');
+         setCell(board,11,10,'X');
+         setCell(board,11,11,'X');
 	       printBoard(board);
+         countNeighbors(board,3,5);
          countNeighbors(board,3,6);
+         countNeighbors(board,3,7);
+         countNeighbors(board,10,9);
+         countNeighbors(board,11,9);
+         countNeighbors(board,11,10);
+         countNeighbors(board,11,11);
          printBoard(board);
          printBoard(generateNextBoard(board));
+         
          //printBoard(generateNextBoard(board));
 
     } // end main
