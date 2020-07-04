@@ -9,6 +9,6 @@ public class Driver{
 creates the object and calls your constructor to initialize the instance
 variables */
 
-Time time = new Time(11,59,59.9);
+Time t = new Time(11,59,59.9);
   }
 }

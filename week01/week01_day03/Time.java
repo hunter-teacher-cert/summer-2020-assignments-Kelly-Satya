@@ -35,5 +35,16 @@ constructor, like this one. */
 
 } //end Time value constructor
 
+public static void printTime(Time t) {
+
+    // System.out.print(t.hour);
+    // System.out.print(t.minute);
+    // System.out.print(":");
+    // System.out.println(t.second);
+
+    // OR more concisely:
+
+    System.out.printf("%02d: %02d: %04.lf\n", t.hour, t.minute, t.second);
+} // end PrintTime method
 
 } //end class
