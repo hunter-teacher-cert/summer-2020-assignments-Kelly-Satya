@@ -65,14 +65,16 @@ class Life{
           int count=0;
           for (int i = r - 1; i <= r + 1; i++) {
               for (int j = c - 1; j <= c + 1; j++) {
+                if (i >= 0 && i < board.length && j >= 0 && j < board[i].length) {
                   if (i != r || j != c) {
                     if(board[i][j]=='X'){
                       count++;
+                    } //end first if
                     } //end if statement looking for X
                   } //end count neighbors if condition
               } // end nested for loop
           } // end parent for loop
-               System.out.println(count);
+               //System.out.println(count);
                return count;
 
     } // end countNeighbors
@@ -103,12 +105,12 @@ class Life{
       next generation
     */
 
-    public char[][] generateNextBoard(char[][] board){
+    public static char[][] generateNextBoard(char[][] board){
 
          char newBoard[][] = new char[25][25];
 
-            for (int newR = 0; newR < 25; newR++) {
-              for (int newC = 0; newC < 25; newC++) {
+            for (int newR = 0; newR < newBoard.length; newR++) {
+              for (int newC = 0; newC < newBoard.length; newC++) {
                     if (board[newR][newC]=='X' &&
                     countNeighbors(board,newR,newC) > 3 ||
                     countNeighbors(board,newR,newC) < 2) {
@@ -133,6 +135,8 @@ class Life{
 	       printBoard(board);
          countNeighbors(board,3,6);
          printBoard(board);
+         generateNextBoard(board);
+         printBoard(generateNextBoard(board));
 
     } // end main
 } // end class
