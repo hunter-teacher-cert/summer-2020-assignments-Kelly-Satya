@@ -87,12 +87,20 @@ class Life{
      */
     public static char getNextGenCell(char[][] board,int r, int c){
 	// calculate the number of living neighbors around board[r][c]
-      for (int rows = 0; rows < board.length; rows++) {
-          for (int cols = 0; cols < board[rows].length; cols++) {
+            char currentSquare= board[r][c];
+            int count= countNeighbors(board,r,c);
 
-      } // end nested for loop
-  } // end parent for loop
+            if (currentSquare=='X' && count > 3 || count < 2) {
+              return' ';
+            }
 
+            if (currentSquare==' ' && count == 3)  {
+              return'X';
+            }
+
+            if (currentSquare=='X' && count==3 || count==2) {
+              return'X';
+            }
 
 	// determine if board[r][c] is living or dead
 	//    if living and 2 3 neighbors then remain alive
@@ -111,14 +119,11 @@ class Life{
 
             for (int newR = 0; newR < newBoard.length; newR++) {
               for (int newC = 0; newC < newBoard.length; newC++) {
-                    if (board[newR][newC]=='X' &&
-                    countNeighbors(board,newR,newC) > 3 ||
-                    countNeighbors(board,newR,newC) < 2) {
-                      newBoard[newR][newC] = ' '; //sets cells to dead
+
+                    newBoard[newR][newC]= getNextGenCell(board,newR,newC);
 
              } // end nested for
          } // end parent for statement
-       }// end char method
 	         return newBoard;
     } //end generateNextBoard method
 
@@ -135,8 +140,8 @@ class Life{
 	       printBoard(board);
          countNeighbors(board,3,6);
          printBoard(board);
-         generateNextBoard(board);
          printBoard(generateNextBoard(board));
+         //printBoard(generateNextBoard(board));
 
     } // end main
 } // end class
