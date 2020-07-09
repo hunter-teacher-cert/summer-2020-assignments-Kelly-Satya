@@ -129,8 +129,6 @@ class Life{
 
 
 
-
-
     public static void main(String[] args) {
 	       char[][] board;
 	       board = createNewBoard(25,25);
@@ -151,7 +149,7 @@ class Life{
          countNeighbors(board,11,11);
          printBoard(board);
          printBoard(generateNextBoard(board));
-         
+
          //printBoard(generateNextBoard(board));
 
     } // end main
